@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agenda de Contatos</title>
+    <link rel="stylesheet" href="./main.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Agenda de Contatos</h1>
+
+        <form id="contactForm">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required placeholder="Nome e Sobrenome">
+
+            <label for="email">E-mail:</label>
+            <input type="email" id="email" name="email" required placeholder="Digite o e-mail">
+
+            <label for="countryCode">País de origem:</label>
+            <select id="countryCode" name="countryCode" required>
+                <option value="+55">Brasil (+55)</option>
+                <option value="+54">Argentina (+54)</option>
+                <option value="+61">Austrália (+61)</option>
+                <option value="+32">Bélgica (+32)</option>
+                <option value="+86">China (+86)</option>
+                <option value="+420">República Tcheca (+420)</option>
+                <option value="+20">Egito (+20)</option>
+                <option value="+372">Estônia (+372)</option>
+                <option value="+33">França (+33)</option>
+                <option value="+49">Alemanha (+49)</option>
+                <option value="+91">Índia (+91)</option>
+                <option value="+62">Indonésia (+62)</option>
+                <option value="+39">Itália (+39)</option>
+                <option value="+81">Japão (+81)</option>
+                <option value="+52">México (+52)</option>
+                <option value="+31">Países Baixos (+31)</option>
+                <option value="+47">Noruega (+47)</option>
+                <option value="+63">Filipinas (+63)</option>
+                <option value="+351">Portugal (+351)</option>
+                <option value="+7">Rússia (+7)</option>
+                <option value="+65">Singapura (+65)</option>
+                <option value="+27">África do Sul (+27)</option>
+                <option value="+34">Espanha (+34)</option>
+                <option value="+46">Suécia (+46)</option>
+                <option value="+41">Suíça (+41)</option>
+                <option value="+66">Tailândia (+66)</option>
+                <option value="+90">Turquia (+90)</option>
+                <option value="+1">Estados Unidos (+1)</option>
+                <option value="+44">Reino Unido (+44)</option>
+                <option value="+82">Coreia do Sul (+82)</option>
+            </select>
+
+            <label id="phone" for="phone">Telefone:</label>
+            <input type="tel" id="phone" name="phone" required pattern="[0-9]{10,11}" placeholder="Digite o telefone (somente números)">
+
+            <p id="errorMessage" class="error-message"></p>
+
+            <button type="submit">Cadastrar</button>
+        </form>
+
+        <table id="contactsTable">
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>E-mail</th>
+                    <th>Telefone</th>
+                </tr>
+            </thead>
+            <tbody>
+            </tbody>
+        </table>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
